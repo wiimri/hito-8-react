@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pizza Hawaiana",
+    "precio": 8500,
+    "ingredientes": ["Jamón", "Piña", "Queso mozzarella", "Salsa de tomate"],
+    "imagen": "/assets/img/pizzahawaiana.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Pizza Pepperoni",
+    "precio": 9000,
+    "ingredientes": ["Pepperoni", "Queso mozzarella", "Salsa de tomate"],
+    "imagen": "/assets/img/pizzapepperoni.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Pizza Margarita",
+    "precio": 7500,
+    "ingredientes": ["Queso mozzarella", "Tomate", "Albahaca"],
+    "imagen": "/assets/img/pizzamargarita.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Pizza Cuatro Quesos",
+    "precio": 9500,
+    "ingredientes": ["Queso mozzarella", "Queso azul", "Parmesano", "Queso de cabra"],
+    "imagen": "/assets/img/pizza4quesos.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Pizza Vegetariana",
+    "precio": 8000,
+    "ingredientes": ["Pimiento", "Champiñones", "Aceitunas", "Cebolla", "Queso"],
+    "imagen": "/assets/img/pizzavegetariana.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Pizza Napolitana",
+    "precio": 8900,
+    "ingredientes": ["Tomate", "Ajo", "Anchoas", "Albahaca", "Aceite de oliva"],
+    "imagen": "/assets/img/pizzanapolitana.png"
+  }
+]
