@@ -1,12 +1,111 @@
-# React + Vite
+# 🍕 Pizzería Mamma Mía
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto desarrollado en **React** como parte del Hito 8 del bootcamp Desafío Latam. 
+Incluye integración con **backend en Express** utilizando **JWT (JSON Web Tokens)** para autenticación real.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
+- **Frontend**: React + Vite + React Router + Context API
+- **Backend**: Node.js + Express
+- **Autenticación**: JWT
+- **Estilos**: Bootstrap 5
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Estructura del proyecto
+
+```
+frontend/
+  ├── src/
+  │   ├── App.jsx
+  │   ├── main.jsx
+  │   ├── context/
+  │   │   ├── UserContext.jsx
+  │   │   ├── CartContext.jsx
+  │   │   └── PizzasContext.jsx
+  │   ├── pages/
+  │   │   ├── Home.jsx
+  │   │   ├── Login.jsx
+  │   │   ├── Register.jsx
+  │   │   ├── Profile.jsx
+  │   │   └── Cart.jsx
+  │   ├── components/
+  │   │   ├── Navbar.jsx
+  │   │   └── ProtectedRoute.jsx
+backend-pizza/
+  ├── index.js
+  ├── routes/
+  │   ├── auth.route.js
+  │   └── checkouts.route.js (opcional)
+  └── data/
+      └── pizzas.json
+```
+
+---
+
+## 🔑 Funcionalidades principales
+- **Registro y Login** con conexión al backend (`/api/auth/register` y `/api/auth/login`).
+- Manejo de sesión con **JWT** guardado en `localStorage`.
+- **Perfil de usuario** (`/api/auth/me`) muestra el email autenticado y permite cerrar sesión.
+- **Carrito de compras** conectado al backend (`/api/checkouts`), simulando una compra.
+- **Protección de rutas** con `ProtectedRoute` para `/profile`.
+- Persistencia de sesión en `localStorage`.
+
+---
+
+## 🛠️ Instalación y ejecución
+
+### 1. Clonar el repositorio
+```bash
+git clone <repo-url>
+cd (nombre de carpeta donde tendras los archivos)
+```
+
+### 2. Backend (Express)
+```bash
+cd backend-pizza
+npm install
+npm run dev
+```
+Esto levanta el backend en `http://localhost:5000`.
+
+### 3. Frontend (React)
+En otra terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Esto levanta el frontend en `http://localhost:5173`.
+
+---
+
+## 🔗 Endpoints disponibles
+
+### Auth
+- `POST /api/auth/register` → Registro de usuario
+- `POST /api/auth/login` → Inicio de sesión (retorna JWT)
+- `GET /api/auth/me` → Devuelve datos del usuario autenticado (requiere `Authorization: Bearer <token>`)
+
+### Pizzas
+- `GET /api/pizzas` → Lista de pizzas disponibles
+- `GET /api/pizzas/:id` → Detalle de pizza por ID
+
+### Checkout
+- `POST /api/checkouts` → Simulación de compra (requiere JWT)
+
+---
+
+## ✅ Requisitos del Hito 8 cumplidos
+1. Métodos `login`, `register`, `logout` y `getProfile` en `UserContext`.
+2. Login y Register conectados al backend.
+3. Profile muestra email autenticado y permite logout.
+4. Navbar cambia según estado de sesión.
+5. Cart envía el pedido al backend con token JWT.
+6. Mensaje de éxito en la compra.
+
+---
+
+## 👨‍💻 Autor
+Proyecto desarrollado por **Williams Arias - Desafío Latam**.
